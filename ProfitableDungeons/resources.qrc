@@ -1,0 +1,47 @@
+<RCC>
+    <qresource prefix="/tiles">
+        <file>res/imgs/newgrass.png</file>
+        <file>res/imgs/dirt.png</file>
+        <file>res/imgs/crops.png</file>
+        <file>res/imgs/marblepath.png</file>
+        <file>res/imgs/Smoke0002.png</file>
+        <file>res/imgs/Smoke0001.png</file>
+        <file>res/imgs/Smoke0000.png</file>
+    </qresource>
+    <qresource prefix="/buildings">
+        <file>res/imgs/villa.png</file>
+        <file>res/imgs/castle.png</file>
+        <file>res/imgs/watchtower.png</file>
+        <file>res/imgs/treehouse.png</file>
+        <file>res/imgs/tailor.png</file>
+        <file>res/imgs/tavern.png</file>
+        <file>res/imgs/thatched.png</file>
+        <file>res/imgs/inn.png</file>
+        <file>res/imgs/house.png</file>
+        <file>res/imgs/fruit.png</file>
+        <file>res/imgs/fish.png</file>
+        <file>res/imgs/clock.png</file>
+        <file>res/imgs/chapel.png</file>
+    </qresource>
+    <qresource prefix="/buildings/walls">
+        <file>res/imgs/wal0010.png</file>
+        <file>res/imgs/wal0009.png</file>
+        <file>res/imgs/wal0008.png</file>
+        <file>res/imgs/wal0007.png</file>
+        <file>res/imgs/wal0006.png</file>
+        <file>res/imgs/wal0005.png</file>
+        <file>res/imgs/wal0004.png</file>
+        <file>res/imgs/wal0003.png</file>
+        <file>res/imgs/wal0002.png</file>
+        <file>res/imgs/wal0001.png</file>
+        <file>res/imgs/wal0000.png</file>
+    </qresource>
+    <qresource prefix="/nature">
+        <file>res/imgs/oaktree.png</file>
+        <file>res/imgs/firtree.png</file>
+        <file>res/imgs/pinetree.png</file>
+    </qresource>
+    <qresource prefix="/others">
+        <file>res/imgs/upper_bar_background.png</file>
+    </qresource>
+</RCC>
