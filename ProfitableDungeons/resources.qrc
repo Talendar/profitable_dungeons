@@ -46,6 +46,19 @@
         <file>res/imgs/oaktree.png</file>
         <file>res/imgs/firtree.png</file>
         <file>res/imgs/pinetree.png</file>
+        <file>res/imgs/claypit_mine.png</file>
+        <file>res/imgs/claypit.png</file>
+        <file>res/imgs/mountain_2_work.png</file>
+        <file>res/imgs/mountain_1_work.png</file>
+        <file>res/imgs/mountain_2.png</file>
+        <file>res/imgs/mountain_1.png</file>
+        <file>res/imgs/apple_tree.png</file>
+        <file>res/imgs/garden.png</file>
+        <file>res/imgs/mushroom05.png</file>
+        <file>res/imgs/mushroom04.png</file>
+        <file>res/imgs/mushroom03.png</file>
+        <file>res/imgs/mushroom02.png</file>
+        <file>res/imgs/mushroom01.png</file>
     </qresource>
     <qresource prefix="/others">
         <file>res/imgs/upper_bar_background.png</file>
