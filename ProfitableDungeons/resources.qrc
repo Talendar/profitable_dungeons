@@ -22,6 +22,12 @@
         <file>res/imgs/fish.png</file>
         <file>res/imgs/clock.png</file>
         <file>res/imgs/chapel.png</file>
+        <file>res/imgs/tent_lumberjack.png</file>
+        <file>res/imgs/tent_hunter.png</file>
+        <file>res/imgs/house1c.png</file>
+        <file>res/imgs/Well_00000.png</file>
+        <file>res/imgs/blacksmith.png</file>
+        <file>res/imgs/broken_tower_background.png</file>
     </qresource>
     <qresource prefix="/buildings/walls">
         <file>res/imgs/wal0010.png</file>
@@ -43,5 +49,6 @@
     </qresource>
     <qresource prefix="/others">
         <file>res/imgs/upper_bar_background.png</file>
+        <file>res/imgs/sign_post.svg</file>
     </qresource>
 </RCC>
