@@ -51,7 +51,19 @@ GameWindow::GameWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::GameWi
     this->buildings["mine"] = new Building("Mine",
                                            ui->mine_unbuilt, ui->mine,
                                            this->purse,
-                                           20, 700, 500);
+                                           80, 1100, 1200);
+    this->buildings["hunter"] = new Building("Hunter Hut",
+                                             ui->hunter_hut_unbuilt,ui->hunter_hut,
+                                             this->purse,
+                                             100,1200,1500);
+    this->buildings["food"] = new Building("Food Shop",
+                                           ui->food_shop_unbuilt,ui->food_shop,
+                                           this->purse,
+                                           20,700,500);
+    this->buildings["lumberjack"] = new Building("Lumberjack",
+                                                 ui->lumberjack_unbuilt,ui->lumberjack,
+                                                 this->purse,
+                                                 40,1000,700);
 }
 
 
@@ -153,3 +165,15 @@ void GameWindow::on_clothes_shop_clicked() {this->buildingClicked("clothes");}
 // Mine
 void GameWindow::on_mine_unbuilt_clicked() {this->buildingClicked("mine");}
 void GameWindow::on_mine_clicked() {this->buildingClicked("mine");}
+
+// Hunter Hunt
+void GameWindow::on_hunter_hut_unbuilt_clicked() {this->buildingClicked("hunter");}
+void GameWindow::on_hunter_hut_clicked() {this->buildingClicked("hunter");}
+
+// Food Shop
+void GameWindow::on_food_shop_unbuilt_clicked() {this->buildingClicked("food");}
+void GameWindow::on_food_shop_clicked() {this->buildingClicked("food");}
+
+// Lumberjack
+void GameWindow::on_lumberjack_unbuilt_clicked() {this->buildingClicked("lumberjack");}
+void GameWindow::on_lumberjack_clicked() {this->buildingClicked("lumberjack");}

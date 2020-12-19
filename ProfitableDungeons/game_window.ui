@@ -3606,7 +3606,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="food_shop">
+   <widget class="ClickableLabel" name="food_shop">
     <property name="geometry">
      <rect>
       <x>320</x>
@@ -4719,7 +4719,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="lumberjack">
+   <widget class="ClickableLabel" name="lumberjack">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -4961,7 +4961,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="hunter_hut">
+   <widget class="ClickableLabel" name="hunter_hut">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -7469,6 +7469,73 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="ClickableLabel" name="hunter_hut_unbuilt">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>260</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/others/res/imgs/sign_post.svg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="ClickableLabel" name="food_shop_unbuilt">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>340</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/others/res/imgs/sign_post.svg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="ClickableLabel" name="lumberjack_unbuilt">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>510</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/others/res/imgs/sign_post.svg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>hunter_hut_unbuilt</zorder>
    <zorder>wall_308</zorder>
    <zorder>wall_307</zorder>
    <zorder>wall_306</zorder>
@@ -7541,7 +7608,6 @@
    <zorder>wall_164</zorder>
    <zorder>wall_167</zorder>
    <zorder>wall_266</zorder>
-   <zorder>lumberjack</zorder>
    <zorder>crops_2</zorder>
    <zorder>crops_3</zorder>
    <zorder>wall_161</zorder>
@@ -7768,7 +7834,6 @@
    <zorder>barracks</zorder>
    <zorder>wall_273</zorder>
    <zorder>wall_284</zorder>
-   <zorder>food_shop</zorder>
    <zorder>wall_285</zorder>
    <zorder>wall_287</zorder>
    <zorder>wall_234</zorder>
@@ -7800,13 +7865,17 @@
    <zorder>farm_unbuilt</zorder>
    <zorder>farm</zorder>
    <zorder>castle</zorder>
-   <zorder>blacksmith_unbuilt</zorder>
    <zorder>clothes_shop_unbuilt</zorder>
-   <zorder>blacksmith</zorder>
    <zorder>wall_202</zorder>
    <zorder>wall_245</zorder>
    <zorder>mine_unbuilt</zorder>
    <zorder>mine</zorder>
+   <zorder>blacksmith_unbuilt</zorder>
+   <zorder>blacksmith</zorder>
+   <zorder>food_shop_unbuilt</zorder>
+   <zorder>food_shop</zorder>
+   <zorder>lumberjack_unbuilt</zorder>
+   <zorder>lumberjack</zorder>
   </widget>
  </widget>
  <customwidgets>

@@ -37,6 +37,13 @@ private slots:
     void on_clothes_shop_clicked();
     void on_mine_clicked();
     void on_mine_unbuilt_clicked();
+    void on_hunter_hut_clicked();
+    void on_hunter_hut_unbuilt_clicked();
+    void on_food_shop_clicked();
+    void on_food_shop_unbuilt_clicked();
+    void on_lumberjack_clicked();
+    void on_lumberjack_unbuilt_clicked();
+
 
 private:
     Ui::GameWindow *ui;
