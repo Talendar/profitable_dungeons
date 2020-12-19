@@ -1,17 +1,23 @@
 #include "buy_dialog.h"
 #include "ui_buy_dialog.h"
 
-BuyDialog::BuyDialog(QWidget *parent, QString building_name, int gold_price) :
+BuyDialog::BuyDialog(QWidget *parent, Building *building, bool selling) :
     QDialog(parent),
     ui(new Ui::BuyDialog)
 {
     ui->setupUi(this);
-    ui->title->setText("< " + building_name + " >");
+    ui->building_name->setText(building->getName());
+    ui->building_img->setPixmap(building->getBuiltImg());
+
+    QString op(selling ? "SELL" : "UPGRADE");
+    this->setWindowTitle(op);
+
     ui->text->setText(
-        QString("<html><head/><body><p>Do you want to build a ") + \
-        "<span style=' font-weight:600;'>" + building_name + "</span>"
+        QString("<html><head/><body><p>Do you want to %1 the ").arg(op) + \
+        "<span style=' font-weight:600;'>" + building->getName() + "</span>"
         " for <span style=' font-weight:600; color:#edd400;'>" + \
-        QString::number(gold_price) + " gold</span>?</p></body></html>");
+        QString::number(selling ? building->getSellCost() : building->getCost()) + \
+        " gold</span>?</p></body></html>");
 }
 
 BuyDialog::~BuyDialog() {

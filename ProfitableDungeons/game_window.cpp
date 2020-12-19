@@ -17,23 +17,23 @@ GameWindow::GameWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::GameWi
 
     // initializing gold purse
     this->purse = new GoldPurse(ui->gold_label);
-    purse->addGold(100);  // initial gold
+    purse->addGold(1500);  // initial gold
 
     // initializing buildings
     this->buildings["blacksmith"] = new Building("Blacksmith",
                                                  ui->blacksmith_unbuilt, ui->blacksmith,
                                                  this->purse,
-                                                 500,1200,5000);
+                                                 500, 1200, 5000);
     this->buildings["castle"] = new Building("Castle",
                                              ui->castle_unbuilt, ui->castle,
                                              this->purse,
                                              10000, 2000, 1000000);
     this->buildings["tavern"] = new Building("Tavern",
-                                             nullptr, ui->castle,
+                                             nullptr, ui->tavern,
                                              this->purse,
                                              30, 1000, 500);
     this->buildings["clothes"] = new Building("Clothes Shop",
-                                              ui->clothes_shop_unbuilt,ui->clothes_shop,
+                                              ui->clothes_shop_unbuilt, ui->clothes_shop,
                                               this->purse,
                                               10,700,300);
     this->buildings["apple"] = new Building("Apple Orchard",
@@ -48,6 +48,10 @@ GameWindow::GameWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::GameWi
                                           ui->farm_unbuilt, ui->farm,
                                           this->purse,
                                           20, 700, 500);
+    this->buildings["mine"] = new Building("Mine",
+                                           ui->mine_unbuilt, ui->mine,
+                                           this->purse,
+                                           20, 700, 500);
 }
 
 
@@ -63,19 +67,27 @@ GameWindow::~GameWindow() {
  * Handles what happens when the user clicks on a building.
  * @param key
  */
-void GameWindow::built_clicked(QString key) {
-    BuildingDialog *dialog = new BuildingDialog(nullptr, this->buildings[key]->getName());
+void GameWindow::buildingClicked(QString key) {
+    Building *b = this->buildings[key];
+    BuildingDialog *dialog = new BuildingDialog(nullptr, b);
     dialog->exec();
+
+    switch(dialog->getState()) {
+        case BuildingDialog::State::UPGRADE:
+            this->handleUpgrade(b);  break;
+        case BuildingDialog::State::SELL:
+            this->handleSelling(b);  break;
+        case BuildingDialog::State::NO_ACTION: ;
+    }
 }
 
 
 /**
- * Handles what happens when the user clicks on an unbuilt building.
- * @param key
+ * Handles the upgrade of a building.
+ * @param b
  */
-void GameWindow::unbuilt_clicked(QString key) {
-    Building *b = this->buildings[key];
-    BuyDialog *dialog = new BuyDialog(nullptr, b->getName(), b->getCost());
+void GameWindow::handleUpgrade(Building *b) {
+    BuyDialog *dialog = new BuyDialog(nullptr, b, false);
     dialog->exec();
 
     if(dialog->accepted_buying) {
@@ -95,30 +107,49 @@ void GameWindow::unbuilt_clicked(QString key) {
 }
 
 
+/**
+ * Handles selling a building.
+ * @param b
+ */
+void GameWindow::handleSelling(Building *b) {
+    BuyDialog *dialog = new BuyDialog(nullptr, b, true);
+    dialog->exec();
+
+    if(dialog->accepted_buying) {
+        this->purse->addGold(b->getSellCost());
+        b->reset();
+    }
+}
+
+
 // Tavern
-void GameWindow::on_tavern_clicked() {this->built_clicked("tavern");}
+void GameWindow::on_tavern_clicked() {this->buildingClicked("tavern");}
 
 // Castle
-void GameWindow::on_castle_unbuilt_clicked() {this->unbuilt_clicked("castle");}
-void GameWindow::on_castle_clicked() {this->built_clicked("castle");}
+void GameWindow::on_castle_unbuilt_clicked() {this->buildingClicked("castle");}
+void GameWindow::on_castle_clicked() {this->buildingClicked("castle");}
 
 // Apple Orchard
-void GameWindow::on_apple_unbuilt_clicked() {this->unbuilt_clicked("apple");}
-void GameWindow::on_apple_built_clicked() {this->built_clicked("apple");}
-void GameWindow::on_apple_clicked() {this->built_clicked("apple");}
+void GameWindow::on_apple_unbuilt_clicked() {this->buildingClicked("apple");}
+void GameWindow::on_apple_built_clicked() {this->buildingClicked("apple");}
+void GameWindow::on_apple_clicked() {this->buildingClicked("apple");}
 
 // Inn
-void GameWindow::on_inn_unbuilt_clicked() {this->unbuilt_clicked("inn");}
-void GameWindow::on_inn_clicked() {this->built_clicked("inn");}
+void GameWindow::on_inn_unbuilt_clicked() {this->buildingClicked("inn");}
+void GameWindow::on_inn_clicked() {this->buildingClicked("inn");}
 
 // Farm
-void GameWindow::on_farm_unbuilt_clicked() {this->unbuilt_clicked("farm");}
-void GameWindow::on_farm_clicked() {this->built_clicked("farm");}
+void GameWindow::on_farm_unbuilt_clicked() {this->buildingClicked("farm");}
+void GameWindow::on_farm_clicked() {this->buildingClicked("farm");}
 
 // Blacksmith
-void GameWindow::on_blacksmith_unbuilt_clicked() { this->unbuilt_clicked("blacksmith");}
-void GameWindow::on_blacksmith_clicked() {this->built_clicked("blacksmith");}
+void GameWindow::on_blacksmith_unbuilt_clicked() { this->buildingClicked("blacksmith");}
+void GameWindow::on_blacksmith_clicked() {this->buildingClicked("blacksmith");}
 
 // Clothes Shop
-void GameWindow::on_clothes_shop_unbuilt_clicked() { this->unbuilt_clicked("clothes");}
-void GameWindow::on_clothes_shop_clicked() {this->built_clicked("clothes");}
+void GameWindow::on_clothes_shop_unbuilt_clicked() { this->buildingClicked("clothes");}
+void GameWindow::on_clothes_shop_clicked() {this->buildingClicked("clothes");}
+
+// Mine
+void GameWindow::on_mine_unbuilt_clicked() {this->buildingClicked("mine");}
+void GameWindow::on_mine_clicked() {this->buildingClicked("mine");}

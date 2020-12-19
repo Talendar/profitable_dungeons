@@ -35,14 +35,17 @@ private slots:
     void on_blacksmith_clicked();
     void on_clothes_shop_unbuilt_clicked();
     void on_clothes_shop_clicked();
+    void on_mine_clicked();
+    void on_mine_unbuilt_clicked();
 
 private:
     Ui::GameWindow *ui;
     GoldPurse *purse;
     QMap <QString, Building*> buildings;
 
-    void unbuilt_clicked(QString key);
-    void built_clicked(QString key);
+    void buildingClicked(QString key);
+    void handleUpgrade(Building *b);
+    void handleSelling(Building *b);
 };
 
 #endif // GAME_WINDOW_H

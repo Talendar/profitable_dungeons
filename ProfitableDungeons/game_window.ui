@@ -6017,12 +6017,12 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="farm_4">
+   <widget class="QLabel" name="mountain_1">
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>-110</y>
-      <width>271</width>
+      <y>-150</y>
+      <width>341</width>
       <height>281</height>
      </rect>
     </property>
@@ -6039,13 +6039,13 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="farm_5">
+   <widget class="QLabel" name="mountain_2">
     <property name="geometry">
      <rect>
       <x>210</x>
       <y>-150</y>
-      <width>291</width>
-      <height>281</height>
+      <width>331</width>
+      <height>271</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -6061,7 +6061,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="farm_6">
+   <widget class="QLabel" name="mountain_3">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -7227,6 +7227,258 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="ClickableLabel" name="mine">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>-50</y>
+      <width>201</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/nature/res/imgs/claypit_mine.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="wall_300">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>-20</y>
+      <width>261</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/nature/res/imgs/claypit.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="wall_301">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>-60</y>
+      <width>201</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/nature/res/imgs/claypit.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="wall_302">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>-60</y>
+      <width>201</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/nature/res/imgs/claypit.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="wall_303">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>-70</y>
+      <width>261</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/nature/res/imgs/claypit.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="wall_304">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>-170</y>
+      <width>231</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/nature/res/imgs/claypit.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="wall_305">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>-50</y>
+      <width>321</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/nature/res/imgs/claypit.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="wall_306">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>-40</y>
+      <width>241</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/nature/res/imgs/claypit.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="wall_307">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>-110</y>
+      <width>201</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/nature/res/imgs/claypit.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="wall_308">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>20</y>
+      <width>261</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/nature/res/imgs/claypit.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="ClickableLabel" name="mine_unbuilt">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>110</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/others/res/imgs/sign_post.svg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>wall_308</zorder>
+   <zorder>wall_307</zorder>
+   <zorder>wall_306</zorder>
+   <zorder>wall_305</zorder>
+   <zorder>wall_304</zorder>
+   <zorder>wall_303</zorder>
+   <zorder>wall_302</zorder>
+   <zorder>wall_301</zorder>
+   <zorder>wall_300</zorder>
+   <zorder>wall_187</zorder>
    <zorder>farm_23</zorder>
    <zorder>farm_22</zorder>
    <zorder>wall_181</zorder>
@@ -7271,9 +7523,9 @@
    <zorder>wall_290</zorder>
    <zorder>wall_288</zorder>
    <zorder>wall_286</zorder>
-   <zorder>farm_6</zorder>
-   <zorder>farm_5</zorder>
-   <zorder>farm_4</zorder>
+   <zorder>mountain_3</zorder>
+   <zorder>mountain_2</zorder>
+   <zorder>mountain_1</zorder>
    <zorder>wall_80</zorder>
    <zorder>wall_81</zorder>
    <zorder>wall_92</zorder>
@@ -7316,7 +7568,6 @@
    <zorder>wall_109</zorder>
    <zorder>wall_186</zorder>
    <zorder>wall_188</zorder>
-   <zorder>wall_187</zorder>
    <zorder>wall_185</zorder>
    <zorder>wall_83</zorder>
    <zorder>wall_193</zorder>
@@ -7491,7 +7742,6 @@
    <zorder>wall_235</zorder>
    <zorder>wall_236</zorder>
    <zorder>farm_3</zorder>
-   <zorder>blacksmith</zorder>
    <zorder>wall_174</zorder>
    <zorder>wall_197</zorder>
    <zorder>wall_198</zorder>
@@ -7499,8 +7749,6 @@
    <zorder>wall_195</zorder>
    <zorder>tavern</zorder>
    <zorder>wall_201</zorder>
-   <zorder>wall_202</zorder>
-   <zorder>wall_245</zorder>
    <zorder>wall_246</zorder>
    <zorder>wall_247</zorder>
    <zorder>wall_248</zorder>
@@ -7554,6 +7802,11 @@
    <zorder>castle</zorder>
    <zorder>blacksmith_unbuilt</zorder>
    <zorder>clothes_shop_unbuilt</zorder>
+   <zorder>blacksmith</zorder>
+   <zorder>wall_202</zorder>
+   <zorder>wall_245</zorder>
+   <zorder>mine_unbuilt</zorder>
+   <zorder>mine</zorder>
   </widget>
  </widget>
  <customwidgets>
