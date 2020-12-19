@@ -20,26 +20,34 @@ GameWindow::GameWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::GameWi
     purse->addGold(100);  // initial gold
 
     // initializing buildings
+    this->buildings["blacksmith"] = new Building("Blacksmith",
+                                                 ui->blacksmith_unbuilt, ui->blacksmith,
+                                                 this->purse,
+                                                 500,1200,5000);
     this->buildings["castle"] = new Building("Castle",
                                              ui->castle_unbuilt, ui->castle,
                                              this->purse,
-                                             500, 1000, 100000);
+                                             10000, 2000, 1000000);
     this->buildings["tavern"] = new Building("Tavern",
                                              nullptr, ui->castle,
                                              this->purse,
                                              30, 1000, 500);
+    this->buildings["clothes"] = new Building("Clothes Shop",
+                                              ui->clothes_shop_unbuilt,ui->clothes_shop,
+                                              this->purse,
+                                              10,700,300);
     this->buildings["apple"] = new Building("Apple Orchard",
                                             ui->apple_unbuilt, ui->apple,
                                             this->purse,
-                                            5, 250, 100);
+                                            5, 500, 100);
     this->buildings["inn"] = new Building("Inn",
                                           ui->inn_unbuilt, ui->inn,
                                           this->purse,
-                                          60, 3000, 250);
+                                          60, 1000, 1000);
     this->buildings["farm"] = new Building("Farm",
                                           ui->farm_unbuilt, ui->farm,
                                           this->purse,
-                                          15, 500, 150);
+                                          20, 700, 500);
 }
 
 
@@ -106,3 +114,11 @@ void GameWindow::on_inn_clicked() {this->built_clicked("inn");}
 // Farm
 void GameWindow::on_farm_unbuilt_clicked() {this->unbuilt_clicked("farm");}
 void GameWindow::on_farm_clicked() {this->built_clicked("farm");}
+
+// Blacksmith
+void GameWindow::on_blacksmith_unbuilt_clicked() { this->unbuilt_clicked("blacksmith");}
+void GameWindow::on_blacksmith_clicked() {this->built_clicked("blacksmith");}
+
+// Clothes Shop
+void GameWindow::on_clothes_shop_unbuilt_clicked() { this->unbuilt_clicked("clothes");}
+void GameWindow::on_clothes_shop_clicked() {this->built_clicked("clothes");}

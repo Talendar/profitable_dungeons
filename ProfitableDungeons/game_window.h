@@ -31,6 +31,10 @@ private slots:
     void on_inn_clicked();
     void on_farm_unbuilt_clicked();
     void on_farm_clicked();
+    void on_blacksmith_unbuilt_clicked();
+    void on_blacksmith_clicked();
+    void on_clothes_shop_unbuilt_clicked();
+    void on_clothes_shop_clicked();
 
 private:
     Ui::GameWindow *ui;

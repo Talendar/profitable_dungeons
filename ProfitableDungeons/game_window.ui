@@ -4024,7 +4024,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="clothes_shop">
+   <widget class="ClickableLabel" name="clothes_shop">
     <property name="geometry">
      <rect>
       <x>490</x>
@@ -4431,6 +4431,9 @@
     </property>
    </widget>
    <widget class="ClickableLabel" name="castle">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>510</x>
@@ -5090,7 +5093,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="blacksmith">
+   <widget class="ClickableLabel" name="blacksmith">
     <property name="geometry">
      <rect>
       <x>400</x>
@@ -7180,6 +7183,50 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="ClickableLabel" name="blacksmith_unbuilt">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>160</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/others/res/imgs/sign_post.svg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="ClickableLabel" name="clothes_shop_unbuilt">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>260</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/others/res/imgs/sign_post.svg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
    <zorder>farm_23</zorder>
    <zorder>farm_22</zorder>
    <zorder>wall_181</zorder>
@@ -7505,6 +7552,8 @@
    <zorder>farm_unbuilt</zorder>
    <zorder>farm</zorder>
    <zorder>castle</zorder>
+   <zorder>blacksmith_unbuilt</zorder>
+   <zorder>clothes_shop_unbuilt</zorder>
   </widget>
  </widget>
  <customwidgets>

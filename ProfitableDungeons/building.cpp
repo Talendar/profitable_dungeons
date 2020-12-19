@@ -50,7 +50,7 @@ int Building::getCost() {
  */
 void Building::produce() {
     while(this->active) {
-        this->purse->addGold(this->gold_per_tick);
+        this->purse->addGold(this->gold_per_tick * this->tier * 0.5);
         std::this_thread::sleep_for(std::chrono::milliseconds(this->tick_interval));
     }
 }
@@ -61,11 +61,17 @@ void Building::produce() {
  */
 void Building::upgrade() {
     this->tier++;
+    this->cost = this->cost * 1.2;
 
     // shows building
     if(this->tier == 1 && ui_unbuilt != nullptr) {
         this->ui_unbuilt->setVisible(false);
         this->ui_built->setVisible(true);
+    }
+    // updates gold per tick, tick interval
+    else if(this->tier > 1){
+        this->gold_per_tick = this->gold_per_tick * 1.05;
+        this->tick_interval = this->tick_interval * 0.99;
     }
 
     // starts production
@@ -74,6 +80,5 @@ void Building::upgrade() {
         this->worker = new std::thread(&Building::produce, this);
     }
 
-    // updates gold per tick, tick interval and cost
-    // to_do
+
 }
