@@ -8,7 +8,7 @@ Building::Building(QString name,
                    ClickableLabel *ui_unbuilt,
                    ClickableLabel *ui_built,
                    GoldPurse *purse,
-                   int gold_per_tick, int tick_interval, int cost)
+                   int gold_per_tick, int tick_interval, int cost,int current_tier)
     : BASE_GPT(gold_per_tick),
       BASE_COST(cost),
       BASE_TICK_INT(tick_interval)
@@ -17,7 +17,10 @@ Building::Building(QString name,
     this->ui_unbuilt = ui_unbuilt;
     this->ui_built = ui_built;
     this->purse = purse;
-    this->reset();
+    if(current_tier == 0)
+        this->reset();
+    else
+        this->initialize((current_tier));
 }
 
 
@@ -114,5 +117,22 @@ void Building::reset() {
     if(ui_unbuilt != nullptr) {
         ui_built->setVisible(false);
         ui_unbuilt->setVisible(true);
+    }
+}
+/*
+ * const double GOLD_UPG_PC = 1.25;
+    const double TICK_UPG_PC = 0.95;
+    const double COST_UPG_PC = 2;
+    const double SELL_COST_PC = 0.5; */
+
+void Building::initialize(int current_tier) {
+    this->active = false;
+    this->tier = current_tier-1;
+    this->upgrade();
+
+
+    if(ui_unbuilt != nullptr) {
+        ui_built->setVisible(true);
+        ui_unbuilt->setVisible(false);
     }
 }

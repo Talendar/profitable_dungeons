@@ -4228,8 +4228,14 @@
       <x>0</x>
       <y>0</y>
       <width>1003</width>
-      <height>21</height>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="styleSheet">
      <string notr="true"/>
@@ -4256,8 +4262,8 @@
    <widget class="QLabel" name="gold_label">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>0</y>
+      <x>450</x>
+      <y>5</y>
       <width>151</width>
       <height>21</height>
      </rect>
@@ -7535,6 +7541,72 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="ClickableLabel" name="save">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>0</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>res/imgs/save.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="ClickableLabel" name="help">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>0</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>res/imgs/help.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="ClickableLabel" name="exit">
+    <property name="geometry">
+     <rect>
+      <x>975</x>
+      <y>5</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>res/imgs/exit.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
    <zorder>hunter_hut_unbuilt</zorder>
    <zorder>wall_308</zorder>
    <zorder>wall_307</zorder>
@@ -7876,6 +7948,9 @@
    <zorder>food_shop</zorder>
    <zorder>lumberjack_unbuilt</zorder>
    <zorder>lumberjack</zorder>
+   <zorder>save</zorder>
+   <zorder>help</zorder>
+   <zorder>exit</zorder>
   </widget>
  </widget>
  <customwidgets>

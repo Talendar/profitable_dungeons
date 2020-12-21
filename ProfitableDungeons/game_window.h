@@ -17,7 +17,8 @@ class GameWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit GameWindow(QWidget *parent = nullptr);
+    explicit GameWindow(QWidget *parent = nullptr,
+                        QString path = nullptr);
     ~GameWindow();
 
 private slots:
@@ -43,12 +44,14 @@ private slots:
     void on_food_shop_unbuilt_clicked();
     void on_lumberjack_clicked();
     void on_lumberjack_unbuilt_clicked();
+    void on_save_clicked();
 
 
 private:
     Ui::GameWindow *ui;
     GoldPurse *purse;
     QMap <QString, Building*> buildings;
+    QMap <QString, int> buildings_tier;
 
     void buildingClicked(QString key);
     void handleUpgrade(Building *b);

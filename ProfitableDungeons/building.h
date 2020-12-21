@@ -16,7 +16,7 @@ public:
              ClickableLabel *ui_unbuilt,
              ClickableLabel *ui_built,
              GoldPurse *purse,
-             int gold_per_tick, int tick_interval, int cost);
+             int gold_per_tick, int tick_interval, int cost,int current_tier);
     ~Building();
 
     QString getName();
@@ -28,6 +28,7 @@ public:
     QPixmap getBuiltImg();
     void upgrade();
     void reset();
+    void initialize(int current_tier);
 
 private:
     QString name;

@@ -30,10 +30,18 @@ void InitialWindow::on_new_game_btn_clicked()
 
 // LOAD GAME BTN
 void InitialWindow::on_load_game_btn_clicked() {
-    QMessageBox *dialog = new QMessageBox;
-    dialog->setWindowTitle("Error");
-    dialog->setText("< NOT IMPLEMENTED >");
-    dialog->show();
+    QFile file("dados.txt");
+    if(!file.open(QIODevice::ReadOnly | QIODevice::Text)){
+        QMessageBox *dialog = new QMessageBox;
+        dialog->setWindowTitle("Error #3");
+        dialog->setText("You don't have a saved game");
+        dialog->show();
+    }
+    else{
+        GameWindow *window = new GameWindow(nullptr,"dados.txt");
+        window->show();
+        this->close();
+    }
 }
 
 
