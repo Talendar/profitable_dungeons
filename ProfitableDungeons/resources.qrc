@@ -68,4 +68,5 @@
         <file>res/imgs/save_button.png</file>
         <file>res/imgs/question_mark_button.png</file>
     </qresource>
+    <qresource prefix="/"/>
 </RCC>

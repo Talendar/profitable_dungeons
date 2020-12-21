@@ -46,6 +46,7 @@ private slots:
     void on_lumberjack_clicked();
     void on_lumberjack_unbuilt_clicked();
     void on_save_clicked();
+    void on_help_clicked();
 
 
 private:

@@ -1,5 +1,7 @@
 #include "game_window.h"
 #include "ui_game_window.h"
+#include <QDesktopServices>
+#include <QUrl>
 
 
 /**
@@ -244,8 +246,10 @@ void GameWindow::handleSelling(Building *b) {
 /**
  * @brief GameWindow::on_save_clicked
  */
-void GameWindow::on_save_clicked() {this->saveGame();}
+void GameWindow::on_save_clicked() { this->saveGame();}
 
+// Help
+void GameWindow::on_help_clicked(){ QDesktopServices::openUrl(QUrl("Manual_Profit_Dungeon.pdf",QUrl::TolerantMode));}
 
 // Tavern
 void GameWindow::on_tavern_clicked() {this->buildingClicked("tavern");}
