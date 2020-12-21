@@ -63,8 +63,9 @@
     <qresource prefix="/others">
         <file>res/imgs/upper_bar_background.png</file>
         <file>res/imgs/sign_post.svg</file>
-        <file>res/imgs/save.png</file>
-        <file>res/imgs/help.png</file>
-        <file>res/imgs/exit.png</file>
+    </qresource>
+    <qresource prefix="/buttons">
+        <file>res/imgs/save_button.png</file>
+        <file>res/imgs/question_mark_button.png</file>
     </qresource>
 </RCC>

@@ -7544,11 +7544,17 @@
    <widget class="ClickableLabel" name="save">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>0</y>
-      <width>31</width>
-      <height>31</height>
+      <x>936</x>
+      <y>4</y>
+      <width>22</width>
+      <height>22</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="styleSheet">
      <string notr="true">background: transparent;</string>
@@ -7557,7 +7563,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>res/imgs/save.png</pixmap>
+     <pixmap resource="resources.qrc">:/buttons/res/imgs/save_button.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -7566,11 +7572,17 @@
    <widget class="ClickableLabel" name="help">
     <property name="geometry">
      <rect>
-      <x>930</x>
-      <y>0</y>
-      <width>31</width>
-      <height>31</height>
+      <x>968</x>
+      <y>4</y>
+      <width>22</width>
+      <height>22</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="styleSheet">
      <string notr="true">background: transparent;</string>
@@ -7579,29 +7591,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>res/imgs/help.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="ClickableLabel" name="exit">
-    <property name="geometry">
-     <rect>
-      <x>975</x>
-      <y>5</y>
-      <width>21</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: transparent;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>res/imgs/exit.png</pixmap>
+     <pixmap resource="resources.qrc">:/buttons/res/imgs/question_mark_button.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -7950,7 +7940,6 @@
    <zorder>lumberjack</zorder>
    <zorder>save</zorder>
    <zorder>help</zorder>
-   <zorder>exit</zorder>
   </widget>
  </widget>
  <customwidgets>

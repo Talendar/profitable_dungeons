@@ -8,7 +8,7 @@ Building::Building(QString name,
                    ClickableLabel *ui_unbuilt,
                    ClickableLabel *ui_built,
                    GoldPurse *purse,
-                   int gold_per_tick, int tick_interval, int cost,int current_tier)
+                   int gold_per_tick, int tick_interval, int cost)
     : BASE_GPT(gold_per_tick),
       BASE_COST(cost),
       BASE_TICK_INT(tick_interval)
@@ -17,10 +17,7 @@ Building::Building(QString name,
     this->ui_unbuilt = ui_unbuilt;
     this->ui_built = ui_built;
     this->purse = purse;
-    if(current_tier == 0)
-        this->reset();
-    else
-        this->initialize((current_tier));
+    this->reset();
 }
 
 
@@ -84,14 +81,16 @@ void Building::produce() {
 /**
  * Upgrades the building's tier.
  */
-void Building::upgrade() {
-    this->tier++;
-    this->cost = int(this->BASE_COST * pow(this->COST_UPG_PC, tier));
-    this->gold_per_tick = int(this->BASE_GPT * pow(this->GOLD_UPG_PC, tier - 1));
-    this->tick_interval = int(this->BASE_TICK_INT * pow(this->TICK_UPG_PC, tier - 1));
+void Building::upgrade(int x) {
+    for(int i = 0; i < x; i++) {
+        this->tier++;
+        this->cost = int(this->BASE_COST * pow(this->COST_UPG_PC, tier));
+        this->gold_per_tick = int(this->BASE_GPT * pow(this->GOLD_UPG_PC, tier - 1));
+        this->tick_interval = int(this->BASE_TICK_INT * pow(this->TICK_UPG_PC, tier - 1));
+    }
 
     // shows building
-    if(this->tier == 1 && ui_unbuilt != nullptr) {
+    if(this->tier >= 1 && ui_unbuilt != nullptr) {
         this->ui_unbuilt->setVisible(false);
         this->ui_built->setVisible(true);
     }
@@ -117,22 +116,5 @@ void Building::reset() {
     if(ui_unbuilt != nullptr) {
         ui_built->setVisible(false);
         ui_unbuilt->setVisible(true);
-    }
-}
-/*
- * const double GOLD_UPG_PC = 1.25;
-    const double TICK_UPG_PC = 0.95;
-    const double COST_UPG_PC = 2;
-    const double SELL_COST_PC = 0.5; */
-
-void Building::initialize(int current_tier) {
-    this->active = false;
-    this->tier = current_tier-1;
-    this->upgrade();
-
-
-    if(ui_unbuilt != nullptr) {
-        ui_built->setVisible(true);
-        ui_unbuilt->setVisible(false);
     }
 }

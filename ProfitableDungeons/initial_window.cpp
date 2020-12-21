@@ -30,15 +30,12 @@ void InitialWindow::on_new_game_btn_clicked()
 
 // LOAD GAME BTN
 void InitialWindow::on_load_game_btn_clicked() {
-    QFile file("dados.txt");
-    if(!file.open(QIODevice::ReadOnly | QIODevice::Text)){
-        QMessageBox *dialog = new QMessageBox;
-        dialog->setWindowTitle("Error #3");
-        dialog->setText("You don't have a saved game");
-        dialog->show();
-    }
-    else{
-        GameWindow *window = new GameWindow(nullptr,"dados.txt");
+    QString fileName = QFileDialog::getOpenFileName(this,
+           tr("Saved Game File"), "./saved_games",
+           tr("Profitable Dungeons Saved Game (*.pd)"));
+
+    if(fileName != nullptr) {
+        GameWindow *window = new GameWindow(nullptr, fileName);
         window->show();
         this->close();
     }

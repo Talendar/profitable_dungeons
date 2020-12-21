@@ -1,6 +1,7 @@
 #ifndef GAME_WINDOW_H
 #define GAME_WINDOW_H
 
+#include <time.h>
 #include <QMainWindow>
 #include <QtWidgets>
 #include "building_dialog.h"
@@ -18,7 +19,7 @@ class GameWindow : public QMainWindow
 
 public:
     explicit GameWindow(QWidget *parent = nullptr,
-                        QString path = nullptr);
+                        QString saved_path = nullptr);
     ~GameWindow();
 
 private slots:
@@ -51,7 +52,9 @@ private:
     Ui::GameWindow *ui;
     GoldPurse *purse;
     QMap <QString, Building*> buildings;
-    QMap <QString, int> buildings_tier;
+
+    bool load_game(QString path);
+    void saveGame();
 
     void buildingClicked(QString key);
     void handleUpgrade(Building *b);
