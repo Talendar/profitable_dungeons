@@ -4571,7 +4571,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="ClickableLabel" name="barracks">
+   <widget class="ClickableLabel" name="bath">
     <property name="geometry">
      <rect>
       <x>430</x>
@@ -5605,12 +5605,12 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="wall_256">
+   <widget class="ClickableLabel" name="apothecary">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>280</x>
       <y>640</y>
-      <width>91</width>
+      <width>101</width>
       <height>81</height>
      </rect>
     </property>
@@ -7597,6 +7597,131 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="ClickableLabel" name="apothecary_unbuilt">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>660</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/others/res/imgs/sign_post.svg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="ClickableLabel" name="bath_unbuilt">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>430</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/others/res/imgs/sign_post.svg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="wall_196">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>360</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/tiles/res/imgs/dirt.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="wall_238">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>290</y>
+      <width>311</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/tiles/res/imgs/dirt.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="farm_24">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>290</y>
+      <width>251</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/nature/res/imgs/claypit.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>wall_217</zorder>
+   <zorder>farm_23</zorder>
+   <zorder>farm_22</zorder>
+   <zorder>wall_155</zorder>
+   <zorder>wall_181</zorder>
+   <zorder>wall_108</zorder>
+   <zorder>wall_111</zorder>
+   <zorder>wall_112</zorder>
+   <zorder>wall_110</zorder>
+   <zorder>wall_152</zorder>
+   <zorder>wall_158</zorder>
+   <zorder>wall_178</zorder>
+   <zorder>farm_24</zorder>
+   <zorder>wall_196</zorder>
+   <zorder>wall_238</zorder>
    <zorder>hunter_hut_unbuilt</zorder>
    <zorder>wall_308</zorder>
    <zorder>wall_307</zorder>
@@ -7608,21 +7733,9 @@
    <zorder>wall_301</zorder>
    <zorder>wall_300</zorder>
    <zorder>wall_187</zorder>
-   <zorder>farm_23</zorder>
-   <zorder>farm_22</zorder>
-   <zorder>wall_181</zorder>
-   <zorder>wall_108</zorder>
-   <zorder>wall_110</zorder>
-   <zorder>wall_111</zorder>
-   <zorder>wall_112</zorder>
-   <zorder>wall_152</zorder>
-   <zorder>wall_155</zorder>
-   <zorder>wall_158</zorder>
    <zorder>wall_153</zorder>
    <zorder>wall_150</zorder>
-   <zorder>wall_178</zorder>
    <zorder>wall_182</zorder>
-   <zorder>wall_217</zorder>
    <zorder>wall_261</zorder>
    <zorder>wall_299</zorder>
    <zorder>wall_298</zorder>
@@ -7881,7 +7994,6 @@
    <zorder>wall_247</zorder>
    <zorder>wall_248</zorder>
    <zorder>wall_249</zorder>
-   <zorder>wall_256</zorder>
    <zorder>wall_257</zorder>
    <zorder>wall_258</zorder>
    <zorder>wall_215</zorder>
@@ -7893,7 +8005,6 @@
    <zorder>hunter_hut</zorder>
    <zorder>tower</zorder>
    <zorder>wall_271</zorder>
-   <zorder>barracks</zorder>
    <zorder>wall_273</zorder>
    <zorder>wall_284</zorder>
    <zorder>wall_285</zorder>
@@ -7940,6 +8051,10 @@
    <zorder>lumberjack</zorder>
    <zorder>save</zorder>
    <zorder>help</zorder>
+   <zorder>apothecary_unbuilt</zorder>
+   <zorder>apothecary</zorder>
+   <zorder>bath_unbuilt</zorder>
+   <zorder>bath</zorder>
   </widget>
  </widget>
  <customwidgets>

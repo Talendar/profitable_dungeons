@@ -36,7 +36,7 @@ private:
     std::thread *worker = nullptr;
 
     const double GOLD_UPG_PC = 1.25;
-    const double TICK_UPG_PC = 0.95;
+    const double TICK_UPG_PC = 0.99;
     const double COST_UPG_PC = 2;
     const double SELL_COST_PC = 0.5;
 

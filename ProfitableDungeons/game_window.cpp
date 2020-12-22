@@ -21,50 +21,59 @@ GameWindow::GameWindow(QWidget *parent, QString saved_path) : QMainWindow(parent
     this->purse = new GoldPurse(ui->gold_label);
 
     // initializing buildings
+    int mult = 10;
     this->buildings["blacksmith"] = new Building("Blacksmith",
                                                  ui->blacksmith_unbuilt, ui->blacksmith,
                                                  this->purse,
-                                                 500, 1200, 5000);
+                                                 50*mult, 3000, 5000); // 10 g/s
     this->buildings["castle"] = new Building("Castle",
                                              ui->castle_unbuilt, ui->castle,
                                              this->purse,
-                                             10000, 2000, 1000000);
+                                             9000*mult, 60000, 100000);  // 150g/s
     this->buildings["tavern"] = new Building("Tavern",
                                              nullptr, ui->tavern,
                                              this->purse,
-                                             30, 1000, 500);
+                                             6*mult, 200, 20000);  // 30 g/s
     this->buildings["clothes"] = new Building("Clothes Shop",
                                               ui->clothes_shop_unbuilt, ui->clothes_shop,
                                               this->purse,
-                                              10, 700, 300);
+                                              1*mult, 1000, 100); // 1.0 g/s
     this->buildings["apple"] = new Building("Apple Orchard",
                                             ui->apple_unbuilt, ui->apple,
                                             this->purse,
-                                            5, 500, 100);
+                                            220*mult, 90000, 300); // 2.3 g/s
     this->buildings["inn"] = new Building("Inn",
                                           ui->inn_unbuilt, ui->inn,
                                           this->purse,
-                                          60, 1000, 1000);
+                                          8*mult, 500, 7000); // 16 g/s
     this->buildings["farm"] = new Building("Farm",
                                           ui->farm_unbuilt, ui->farm,
                                           this->purse,
-                                          20, 700, 500);
+                                          900*mult, 180000, 1000); // 5.0 g/s
     this->buildings["mine"] = new Building("Mine",
                                            ui->mine_unbuilt, ui->mine,
                                            this->purse,
-                                           80, 1100, 1200);
+                                           1000*mult, 100000, 2200); // 10 g/s
     this->buildings["hunter"] = new Building("Hunter Hut",
-                                             ui->hunter_hut_unbuilt,ui->hunter_hut,
+                                             ui->hunter_hut_unbuilt, ui->hunter_hut,
                                              this->purse,
-                                             100, 1200, 1500);
+                                             8*mult, 18000, 10); // 0.44 g/s
     this->buildings["food"] = new Building("Food Shop",
-                                           ui->food_shop_unbuilt,ui->food_shop,
+                                           ui->food_shop_unbuilt, ui->food_shop,
                                            this->purse,
-                                           20, 700, 500);
+                                           1*mult, 1500, 40); // 0.67 g/s
     this->buildings["lumberjack"] = new Building("Lumberjack",
-                                                 ui->lumberjack_unbuilt,ui->lumberjack,
+                                                 ui->lumberjack_unbuilt, ui->lumberjack,
                                                  this->purse,
-                                                 40, 1000, 700);
+                                                 2*mult, 5000, 8); // 0.4 g/s
+    this->buildings["apothecary"] = new Building("Apothecary",
+                                                 ui->apothecary_unbuilt, ui->apothecary,
+                                                 this->purse,
+                                                 150*mult, 30000, 1250); // 5 g/s
+    this->buildings["bath"] = new Building("Bath House",
+                                           ui->bath_unbuilt, ui->bath,
+                                           this->purse,
+                                           14*mult, 700, 10000); // 20 g/s
 
     // loading data
     bool load_successful = false;
@@ -72,7 +81,7 @@ GameWindow::GameWindow(QWidget *parent, QString saved_path) : QMainWindow(parent
         load_successful = this->load_game(saved_path);
 
     if(!load_successful) {
-        this->purse->addGold(500);  // initial gold
+        this->purse->addGold(10);  // initial gold
 
         if(saved_path != nullptr) {
             QMessageBox *dialog = new QMessageBox;
@@ -294,3 +303,11 @@ void GameWindow::on_food_shop_clicked() {this->buildingClicked("food");}
 // Lumberjack
 void GameWindow::on_lumberjack_unbuilt_clicked() {this->buildingClicked("lumberjack");}
 void GameWindow::on_lumberjack_clicked() {this->buildingClicked("lumberjack");}
+
+// Apothecary
+void GameWindow::on_apothecary_clicked() {this->buildingClicked("apothecary");}
+void GameWindow::on_apothecary_unbuilt_clicked() {this->buildingClicked("apothecary");}
+
+// Bath House
+void GameWindow::on_bath_clicked() {this->buildingClicked("bath");}
+void GameWindow::on_bath_unbuilt_clicked() {this->buildingClicked("bath");}

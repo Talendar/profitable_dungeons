@@ -72,8 +72,8 @@ int Building::getTickInterval() {
  */
 void Building::produce() {
     while(this->active) {
-        this->purse->addGold(this->gold_per_tick * this->tier * 0.5);
         std::this_thread::sleep_for(std::chrono::milliseconds(this->tick_interval));
+        this->purse->addGold(this->gold_per_tick * this->tier * 0.5);
     }
 }
 

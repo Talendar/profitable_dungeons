@@ -49,6 +49,14 @@ private slots:
     void on_help_clicked();
 
 
+    void on_apothecary_clicked();
+
+    void on_apothecary_unbuilt_clicked();
+
+    void on_bath_clicked();
+
+    void on_bath_unbuilt_clicked();
+
 private:
     Ui::GameWindow *ui;
     GoldPurse *purse;
