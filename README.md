@@ -5,15 +5,11 @@
 
 # Instructions for compiling
 
-In order to compile the game from source, you must have Qt5 installed on your machine. If you're a Linux user, the easiest way to install it is through a package manager. See the examples bellow.
+In order to compile the game from source, you must have <a href="https://www.qt.io/download-qt-installer">Qt5</a> installed on your machine. If you're a Linux user, the easiest way to install it is through a package manager. Check <a href="https://wiki.qt.io/Main">Qt wiki</a> for more information on how to install it.
 
-Using <i>apt-get</i>:
+Using <i>apt-get</i> (debian-based distros):
 
 ```sudo apt-get install qt5-default```
 
-Using <i>snap</i>:
 
-```sudo snap install qt5-default```
-
-
-to_do
+to_do: compile
