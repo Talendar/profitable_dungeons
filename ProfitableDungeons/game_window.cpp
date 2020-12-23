@@ -21,7 +21,7 @@ GameWindow::GameWindow(QWidget *parent, QString saved_path) : QMainWindow(parent
     this->purse = new GoldPurse(ui->gold_label);
 
     // initializing buildings
-    int mult = 10;
+    int mult = 3;
     this->buildings["blacksmith"] = new Building("Blacksmith",
                                                  ui->blacksmith_unbuilt, ui->blacksmith,
                                                  this->purse,
