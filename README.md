@@ -1,3 +1,3 @@
-Profitable Dungeons (game)
+# Profitable Dungeons
 
 Work in progress.
