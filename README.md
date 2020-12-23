@@ -11,5 +11,4 @@ Using <i>apt-get</i> (debian-based distros):
 
 ```sudo apt-get install qt5-default```
 
-
-to_do: compile
+Once you've Qt installed, simply open the game's project ("src" folder) with QtCreator, build the project and run the game executable inside the folder with the binaries.
